@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+// Render data from nasa api using hooks
 export default function App(props){
 
     const [ nasaData, setNasaData ] = useState(null)
@@ -23,6 +24,7 @@ export default function App(props){
     }, [])
 
     return (
+    // Parse through the returned nasa data
       <div>
         {nasaData && nasaData.collection.items.map(item => {
           if(!item.links) return null;

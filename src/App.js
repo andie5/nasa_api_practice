@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Render data from nasa api using a class
 class App extends React.Component {
 
   state = { 
@@ -29,6 +30,7 @@ class App extends React.Component {
 
   render() {
 
+    // Parse through the returned nasa data
     return (
       <div>
         {this.state.nasaData && this.state.nasaData.collection.items.map(item => {
